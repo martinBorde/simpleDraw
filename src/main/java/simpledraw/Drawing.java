@@ -68,4 +68,7 @@ public class Drawing {
 		for (Shape s : myShapes)
 			s.setSelected(false);
 	}
+        public List<Shape> getShape(){
+            return myShapes;
+        }
 }
