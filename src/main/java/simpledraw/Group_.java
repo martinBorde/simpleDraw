@@ -5,10 +5,24 @@
  */
 package simpledraw;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author mborde01
  */
 public class Group_ {
+    private ArrayList<Shape> ArrayShapes;
     
+    public Group_(ArrayList<Shape> shape) {
+            setShapes(shape);
+    }
+
+    public ArrayList<Shape> getShapes() {
+            return ArrayShapes;
+    }
+
+    public void setShapes(ArrayList<Shape> shapes) {
+            this.ArrayShapes = shapes;
+    }
 }

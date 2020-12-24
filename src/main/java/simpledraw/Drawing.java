@@ -17,6 +17,8 @@ public class Drawing {
 	 * A drawing is a collection of shapes
 	 */
 	private List<Shape> myShapes = new LinkedList<Shape>();
+        private List<Shape> ShapesGroup = new LinkedList<Shape>();
+        
 
 	public Drawing() {
 	}
@@ -70,5 +72,18 @@ public class Drawing {
 	}
         public List<Shape> getShape(){
             return myShapes;
+        }
+        
+        public List<Shape> getGroup(){
+            return ShapesGroup;
+        }
+        public void setGroup(List<Shape> S){
+            ShapesGroup = S;
+        }
+        public void addToGroup(Shape s){
+            ShapesGroup.add(s);
+        }
+        public void removeFromGroup(Shape s){
+            ShapesGroup.remove(s);
         }
 }
