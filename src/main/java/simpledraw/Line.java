@@ -72,4 +72,8 @@ public class Line
 		}
 		return (distance <= 2) && (lambda >= 0) && (lambda <= 1);
 	}
+        @Override
+        public String toString() {
+            return "Line - Start (" + myStart + ")   end (" + myEnd + ")";
+        }
 }

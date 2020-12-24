@@ -15,7 +15,7 @@ import javax.swing.JPanel;
  */
 
 public class DrawingPanel
-	extends JPanel {
+	extends JPanel implements ShapeViews{
 	DrawingTool myCurrentTool;
 	Drawing myDrawing = new Drawing();
 
@@ -70,5 +70,9 @@ public class DrawingPanel
             addMouseListener(t);
             addMouseMotionListener(t);
         }
+       public void notify(Drawing drw) {
+		//repaint();
+                //TODO ADRIEN
+	}
 
 }

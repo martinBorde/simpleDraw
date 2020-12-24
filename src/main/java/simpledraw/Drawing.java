@@ -18,6 +18,7 @@ public class Drawing {
 	 */
 	private List<Shape> myShapes = new LinkedList<Shape>();
         private List<Shape> ShapesGroup = new LinkedList<Shape>();
+        private Set<Draw_View> DRAW_VIEW = new java.util.HashSet<Draw_View> ();
         
 
 	public Drawing() {
@@ -85,5 +86,13 @@ public class Drawing {
         }
         public void removeFromGroup(Shape s){
             ShapesGroup.remove(s);
+        }
+        private void addView(Draw_View view) {
+		DRAW_VIEW.add(view);
+	}
+        public void notifyAllViews() {
+            if (null != DRAW_VIEW) 
+			for (Draw_View view : DRAW_VIEW) 
+				view.notify(this);
         }
 }

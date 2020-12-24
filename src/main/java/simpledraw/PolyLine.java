@@ -68,7 +68,9 @@ public class PolyLine
 
 		return result;
 	}
-
-
+        @Override
+        public String toString() {
+            return "PolyLine";
+        }
 
 }
