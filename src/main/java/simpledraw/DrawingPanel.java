@@ -71,8 +71,8 @@ public class DrawingPanel
             addMouseMotionListener(t);
         }
        public void notify(Drawing drw) {
-		//repaint();
-                //TODO ADRIEN
+		repaint();
+                
 	}
 
 }
